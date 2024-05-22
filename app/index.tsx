@@ -26,7 +26,9 @@ export default function Index() {
   });
   useEffect(() => {
     const fetchQuote = async () => {
-      const newQuote = chooseQuote(date.format("HH:mm"));
+      //SWITCH TO THE LINE BELOW TO MAKE THE CLOCK CLOCKY AGAIN
+      //const newQuote = chooseQuote(date.format("HH:mm"));
+      const newQuote = chooseQuote("23:53");
       setQuote({ ...newQuote });
     };
 
