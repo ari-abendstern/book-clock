@@ -10,7 +10,7 @@ describe("chooseQuote", () => {
   });
 
   test("when passed an array containing one quote, returns that quote", async () => {
-    expect(await chooseQuote("00_07")).toEqual({
+    expect(chooseQuote("00:07")).toEqual({
       time: "00:07",
       quote_first: "It was ",
       quote_time_case: "seven minutes after midnight",
@@ -22,7 +22,7 @@ describe("chooseQuote", () => {
     });
   });
   test("when passed an array containing multiple quotes, the returned quote should be randomly selected from the array", async () => {
-    expect(await chooseQuote("00_00")).toEqual({
+    expect(chooseQuote("00:00")).toEqual({
       time: "00:00",
       quote_first: "There was the ",
       quote_time_case: "midnight",
