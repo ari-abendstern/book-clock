@@ -1,6 +1,16 @@
 import { Text, View } from "react-native";
+import dayjs from "dayjs";
+import { useEffect, useState } from "react";
 
 export default function Index() {
+  const [date, setDate] = useState(dayjs());
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDate(dayjs());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <View
       style={{
@@ -9,7 +19,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text>{date.format("hh:mm")}</Text>
     </View>
   );
 }
