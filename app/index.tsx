@@ -26,9 +26,7 @@ export default function Index() {
   });
   useEffect(() => {
     const fetchQuote = async () => {
-      //SWITCH TO THE LINE BELOW TO MAKE THE CLOCK CLOCKY AGAIN
-      //const newQuote = chooseQuote(date.format("HH:mm"));
-      const newQuote = chooseQuote("23:53");
+      const newQuote = chooseQuote(date.format("HH:mm"));
       setQuote({ ...newQuote });
     };
 
@@ -45,27 +43,34 @@ export default function Index() {
     >
       <Text
         style={{
-          fontFamily: "serif",
-          fontStyle: "italic",
+          fontFamily: "PlayfairDisplay",
+          fontSize: 30,
+          margin: 70,
         }}
       >
         {quote.quote_first}
-      </Text>
-      <Text
-        style={{
-          fontFamily: "serif",
-          fontWeight: "bold"
-        }}
-      >
-        {quote.quote_time_case}
-      </Text>
-      <Text
-        style={{
-          fontFamily: "serif",
-          fontStyle: "italic",
-        }}
-      >
+        <Text style={{ fontWeight: "900" }}>{quote.quote_time_case}</Text>
         {quote.quote_last}
+      </Text>
+      <Text
+        style={{
+          fontFamily: "PlayfairDisplay",
+          fontStyle: "italic",
+          fontSize: 20,
+          marginHorizontal: 30,
+        }}
+      >
+        {quote.title}
+      </Text>
+      <Text
+        style={{
+          fontFamily: "PlayfairDisplay",
+          fontSize: 20,
+          margin: 30,
+          marginTop: 0,
+        }}
+      >
+        {quote.author}
       </Text>
     </View>
   );

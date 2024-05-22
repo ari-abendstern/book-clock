@@ -34,6 +34,12 @@
         {
           "initialOrientation": "LANDSCAPE"
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/PlayfairDisplay-Italic.ttf", "./assets/fonts/PlayfairDisplay.ttf"]
+        }
       ]
     ],
     "experiments": {
