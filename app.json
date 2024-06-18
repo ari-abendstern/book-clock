@@ -14,13 +14,15 @@
     },
     "ios": {
       "supportsTablet": true,
-      "requireFullScreen": true
+      "requireFullScreen": true,
+      "bundleIdentifier": "com.anonymous.bookclock"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.bookclock"
     },
     "web": {
       "bundler": "metro",
@@ -38,12 +40,23 @@
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/PlayfairDisplay-Italic.ttf", "./assets/fonts/PlayfairDisplay.ttf"]
+          "fonts": [
+            "./assets/fonts/PlayfairDisplay-Italic.ttf",
+            "./assets/fonts/PlayfairDisplay.ttf"
+          ]
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "7c93807c-1fbc-40b9-ab02-e15934e36915"
+      }
     }
   }
 }
